@@ -6,8 +6,11 @@ body {
   font-family: sans-serif;
   padding: 2rem;
 }
+header{
+    background-color: rgb(186, 186, 186);
+}
 header p {
-    color:grey;
+    color:rgb(68, 68, 68);
 }
 section:not([id]) {
   margin: 1em 0;
