@@ -2,13 +2,22 @@
   STYLE GUIDE STYLING 
   Default styling for the style guide 
 */
+*{
+  padding: 0rem;
+  margin: 0rem;
+}
 body {
   font-family: sans-serif;
-  padding: 2rem;
+  margin: 0;
   background-color:#FCFDF1;
+}
+
+main {
+  padding: 2rem;
 }
 header{
     background-color: #FDC207;
+    padding:0;
 }
 header p {
     color: #5D168F;
@@ -39,6 +48,7 @@ footer {
 
 footer p{
   color:#FDC207;
+  margin:0;
 }
 
 /* 
