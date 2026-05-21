@@ -12,11 +12,9 @@ body {
   background-color:#FCFDF1;
 }
 
-
-
 /* FONT STUFF FOR HEADERS AND PARAGRAPHS */
 
-h1{
+h1 {
   font-family: 'Cabin', sans-serif;
   color: #5D168F;
 }
@@ -58,7 +56,6 @@ nav a:hover {
     background-color: #FDC207;
     color: #5D168F;
 }
-
 
 main {
   padding: 2rem;
@@ -121,6 +118,7 @@ section code {
   flex: 2;
   background: #FDC207;
   padding: 1.5rem;
+  margin-right: 35rem;
   border-radius: 1rem;
 }
 
@@ -131,7 +129,6 @@ section code {
   align-items: center;
 }
 
-
 .item-info {
   display: flex;
   flex-direction: column;
@@ -139,7 +136,7 @@ section code {
 }
 
 .total {
-  margin-left:50rem;
+  margin-left: 40rem;
   font-size: 1.5rem;
   font-weight: bold;
 }

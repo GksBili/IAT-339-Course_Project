@@ -58,7 +58,8 @@
             <h2>A radio button input field and a label</h2>
 
             <!-- https://www.w3schools.com/tags/att_input_type_radio.asp -->
-            <input type="radio">
+            <input type="radio" name="option">
+            <label for="radio">Radio Button</label>
           </section>
 
           <section>
@@ -153,50 +154,71 @@
 
           <section>
             <h2>Payout Form</h2>
+
+            <!-- https://www.w3schools.com/html/html_forms.asp -->
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="John Doe"><br><br>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com"><br><br>
+
+              <label for="card">Card Number:</label>
+              <input type="text" id="card" name="card" placeholder="1234 5678 9012 3456"><br><br>
+
+              <label>Payment Method:</label><br>
+              <input type="radio" id="credit" name="method" value="credit">
+              <label for="credit">Credit Card</label>
+              <input type="radio" id="debit" name="method" value="debit">
+              <label for="debit">Debit Card</label><br><br>
+
+              <button type="button">Submit Payment</button>
+            </form>
+
           </section>
 
           <section>
             <h2>Checkout Cart</h2>
             <div class="checkout-container">
 
-  <!-- CART SECTION -->
-  <div class="cart">
-    <h2>Your Cart</h2>
+              <div class="cart">
+                <h2>Your Cart</h2>
 
-    <div class="cart-item">
-      <img src="img/burger.jpg" alt="Burger" height="150" width="120">
+                <div class="cart-item">
+                  <img src="img/burger.jpg" alt="Burger" height="150" width="120">
 
-      <div class="item-info">
-        <h3>WacDonald Burger</h3>
-        <h4>$2.99</h4>
+                  <div class="item-info">
+                    <h3>WacDonald Burger</h3>
+                    <h4>$2.99</h4>
 
-        <label>
-          Number:
-          <input type="number" value="1" min="1">
-        </label>
-      </div>
-    </div>
+                    <label>
+                      Quantity:
+                      <input type="number" value="1" min="1">
+                    </label>
+                  </div>
+                </div>
 
-    <div class="cart-item">
-      <img src="img/fries.jpg" alt="Fries" height="100" width="120">
+                <div class="cart-item">
+                  <img src="img/fries.jpg" alt="Fries" height="100" width="120">
 
-      <div class="item-info">
-        <h3>Wac Fries</h3>
-        <h4>$1.99</h4>
+                  <div class="item-info">
+                    <h3>Wac Fries</h3>
+                    <h4>$1.01</h4>
 
-        <label>
-          Number:
-          <input type="number" value="2" min="1">
-        </label>
-      </div>
-    </div>
+                    <label>
+                      Quantity:
+                      <input type="number" value="2" min="1">
+                    </label>
+                  </div>
+                </div>
 
-    <div class="total">
-      <h3>Total: $6.97</h3>
-    </div>
-  </div>
+                <div class="total">
+                  <h3>Total: $6.97</h3>
+                  <button type="button">Order</button>
+                </div>
+              </div>
 
-</div>
+            </div>
           </section>
 
         </section>
@@ -231,7 +253,6 @@
               and consistent quality. The company's fast service and interesting food also contribute to its appeal.</p>
         </section>
 
-
         <!-- 3. Branding Components -->
         <header>
             <h1>Branding Components</h1>
@@ -241,26 +262,30 @@
         <section>
             <h2>Fonts</h2>
 
-            <p>font here</p>
+            <h1>h1: Cabin</h1>
+            <h2>h2, h3, h4: HindGuntur</h2>
+            <p>p: Roboto</p>
         </section>
 
         <section>
             <h2>Colour Palettes</h2>
 
-            <p>colours here</p>
+            <img src="img/Colors.png" alt="An image that currently does not exist"
+              height="400" width="500">
         </section>
 
         <section>
             <h2>Potential imagery, and, or, art direction</h2>
-
-            <p>other</p>
+              <img src="img/potential1.png" alt="An image that currently does not exist"
+              height="400" width="400">
+              <img src="img/potential2.png" alt="An image that currently does not exist"
+              height="400" width="400">
         </section>
 </main>
 
     <footer>
       <p>© 2026 WacDonald's All Rights Reserved</p>
     </footer>
-
 
 </body>
 
