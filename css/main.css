@@ -54,7 +54,10 @@ nav a {
     background-color: #5D168F;
     transition: background-color 0.3s, color 0.3s;
 }
-
+nav a:hover {
+    background-color: #FDC207;
+    color: #5D168F;
+}
 
 
 main {
@@ -86,6 +89,61 @@ section code {
   padding: 0.5em 0.75em;
 }
 
+.product-card {
+  background-color: #FDC207;
+  display: flex;             
+  gap: 16px;                
+  align-items: center;     
+  padding: 12px;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.product-info {
+  display: grid;
+  flex-direction: row;   
+  gap: 6px;
+}
+
+.checkout-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+/* CART */
+.cart {
+  flex: 2;
+  background: #FDC207;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.cart-item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.total {
+  margin-left:50rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 footer {
   background-color:#5D168F;
   padding: 2rem 0;
@@ -94,7 +152,9 @@ footer {
 footer p{
   color:#FDC207;
   margin:0;
+  padding-left:1rem;
 }
+
 
 /* 
   INTERACTIVE ELEMENTS -------------------
