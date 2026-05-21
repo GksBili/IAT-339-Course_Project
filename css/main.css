@@ -12,6 +12,51 @@ body {
   background-color:#FCFDF1;
 }
 
+
+
+/* FONT STUFF FOR HEADERS AND PARAGRAPHS */
+
+h1{
+  font-family: 'Cabin', sans-serif;
+  color: #5D168F;
+}
+
+h2, h3, h4 {
+  font-family: 'HindGuntur', sans-serif;
+  color: #5D168F;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color: #5D168F;
+}
+
+ul, ol {
+  margin-left: 1.5rem;
+  color: #5D168F;
+}
+
+/* NAVIGATION BUTTON STYLING */
+nav {
+    font-family: "Cabin", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #5D168F;
+}
+
+nav a {
+    flex: 1;
+    padding: 1rem;
+    text-decoration: none;
+    color: #FDC207;
+    text-align: center;
+    
+    background-color: #5D168F;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
 main {
   padding: 2rem;
 }
@@ -56,3 +101,25 @@ footer p{
 */
 
 /* Styling for the navigation button */
+
+/* FONTS FROM GOOGLE FONTS (learned how to import fonts from Andrew's 235 Class*/
+@font-face {
+	font-family: "Cabin";
+	src: url('fonts/Cabin-VariableFont_wdth,wght.ttf') format('woff2'),
+		url('fonts/Cabin-VariableFont_wdth,wght.ttf') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "HindGuntur";
+	src: url('fonts/HindGuntur-Regular.ttf') format('woff2'),
+		url('fonts/HindGuntur-Regular.ttf') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url('fonts/Roboto-VariableFont_wght,wght.ttf') format('woff2'),
+		url('fonts/Roboto-VariableFont_wght,wght.ttf') format('woff');
+	font-display: swap;
+}
