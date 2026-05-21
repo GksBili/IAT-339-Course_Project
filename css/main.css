@@ -5,12 +5,13 @@
 body {
   font-family: sans-serif;
   padding: 2rem;
+  background-color:#FCFDF1;
 }
 header{
-    background-color: rgb(186, 186, 186);
+    background-color: #FDC207;
 }
 header p {
-    color:rgb(68, 68, 68);
+    color: #5D168F;
 }
 section:not([id]) {
   margin: 1em 0;
@@ -31,6 +32,14 @@ section code {
   padding: 0.5em 0.75em;
 }
 
+footer {
+  background-color:#5D168F;
+  padding: 2rem 0;
+}
+
+footer p{
+  color:#FDC207;
+}
 
 /* 
   INTERACTIVE ELEMENTS -------------------
