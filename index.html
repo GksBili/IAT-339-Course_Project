@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>IAT 339 P01 Process</title>
     <meta charset="utf-8">
     <link href="css/main.css" rel="stylesheet">
   </head>
@@ -19,44 +20,80 @@
           <section>
             <h2>In-text link</h2>
 
+            <h3>CSS selector:</h3>
+            <p>.button</p>
+
+            <h3>Sample code:</h3>
+            <code>
+             &lt;a href="#" class="button"&gt;Default Button&lt;/a&gt;</code>
+
+            <h3>Rendered element:</h3>
             <a href="https://github.com/GksBili/IAT-339-Course_Project">A link to our GitHub repository</a>
           </section>
 
           <!-- Default Button styling section -->
           <section>
-
             <h2>A navigation link</h2>
 
             <h3>CSS selector:</h3>
+            <p>nav a</p>
 
-            <p>.nav</p>
+            <h3>Sample code:</h3>
+            <code>
+            &lt;nav&gt;
+              &lt;a href="index.html"&gt;Home&lt;/a&gt;
+            &lt;/nav&gt;</code>
 
-            <h3>Rendered element:</h3>
-
+          <h3>Rendered element:</h3>
             <nav>
               <a href="index.html">Default Button </a>
             </nav>
-            
-
           </section>
 
           <section>
             <h2>Submit/Reset Buttons</h2>
 
+            <h3>CSS selector:</h3>
+            <p>button</p>
+
             <!-- https://www.w3schools.com/tags/tag_button.asp -->
+            <h3>Sample code:</h3>
+            <code>&lt;button type="button"&gt;Order&lt;/button&gt;</code>
+
+             <h3>Rendered element:</h3>
             <button type="button">Order</button>
           </section>
 
           <section>
             <h2>Text Input Field</h2>
 
-            <label for=""form-text">Text:</label>
+            <h3>CSS selector:</h3>
+            <p>input[type="text"]</p>
+
+            <h3>Sample code:</h3>
+            <code>
+              &lt;label for="form-text"&gt;Text:&lt;/label&gt;
+              &lt;input type="text" id="form-text" placeholder="Text Input"&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
+            <label for="form-text">Text:</label>
             <input type="text" id="form-text" placeholder="Text Input">
           </section>
 
           <section>
             <h2>A radio button input field and a label</h2>
 
+            <h3>CSS selector:</h3>
+            <p>input[type="radio"]</p>
+
+            <h3>Sample code:</h3>
+            <code>
+              &lt;input type="radio" id="radio" name="option"&gt;
+              &lt;label for="radio"&gt;Radio Button&lt;/label&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
             <!-- https://www.w3schools.com/tags/att_input_type_radio.asp -->
             <input type="radio" name="option">
             <label for="radio">Radio Button</label>
@@ -64,7 +101,20 @@
 
           <section>
             <h2>Image as a link</h2>
+            <h3>CSS selector:</h3>
+            <p>a img</p>
 
+            <h3>Sample code:</h3>
+            <code>
+              &lt;a href="#"&gt;
+
+                &lt;img src="img/brand.png"
+                alt="Brand Logo"&gt;
+
+              &lt;/a&gt;
+            </code>
+
+          <h3>Rendered element:</h3>
             <a href="https://github.com/GksBili/IAT-339-Course_Project">
               <img src="img/brand.png" alt="An image that currently does not exist"
               height="100" width="100">
@@ -80,6 +130,18 @@
           <section>
             <h2>Headings</h2>
 
+            <h3>CSS selector:</h3>
+            <p>h1, h2, h3, h4</p>
+
+            <h3>Sample code:</h3>
+            <code>
+              &lt;h1&gt;Heading 1&lt;/h1&gt;
+              &lt;h2&gt;Heading 2&lt;/h2&gt;
+              &lt;h3&gt;Heading 3&lt;/h3&gt;
+              &lt;h4&gt;Heading 4&lt;/h4&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
             <h3>Heading 3</h3>
@@ -88,7 +150,18 @@
 
           <section>
             <h2>Paragraphs</h2>
-            
+
+            <h3>CSS selector:</h3>
+            <p>p</p>
+
+            <h3>Sample code:</h3>
+            <code>
+              &lt;p&gt;
+              This is a paragraph.
+              &lt;/p&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. 
               Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur 
               ante hendrerit. Donec et mollis dolor.</p>
@@ -96,6 +169,19 @@
 
           <section>
             <h2>Numbered Lists</h2>
+
+            <h3>CSS selector:</h3>
+            <p>ol li</p>
+
+            <h3>Sample code:</h3>
+            <code>
+              &lt;ol&gt;
+                &lt;li&gt;First item&lt;/li&gt;
+                &lt;li&gt;Second item&lt;/li&gt;
+              &lt;/ol&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
             <ol>
               <li>First item</li>
               <li>Second item</li>
@@ -112,17 +198,45 @@
           <section>
             <h2>Main Navigation</h2>
 
+            <h3>CSS selector:</h3>
+            <p>nav</p>
+
+            <h3>Sample code:</h3>
+            <code>
+              &lt;nav&gt;
+                &lt;a href="#"&gt;Home&lt;/a&gt;
+                &lt;a href="#"&gt;Menu&lt;/a&gt;
+              &lt;/nav&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
             <nav>
               <a href="index.html">Home</a>
               <a href="#">Menu</a>
               <a href="#">Checkout</a>
               <a href="#">Contact</a>
             </nav>
-
           </section>
 
           <section>
           <h2>Product Listing</h2>
+
+          <h3>CSS selector:</h3>
+          <p>.product-card</p>
+
+          <h3>Sample code:</h3>
+          <code>
+            &lt;div class="product-card"&gt;
+              &lt;img src="img/burger.jpg"&gt;
+
+              &lt;div class="product-info"&gt;
+                &lt;h3&gt;Burger&lt;/h3&gt;
+                &lt;p&gt;$2.99&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          </code>
+
+          <h3>Rendered element:</h3>
           <div class="product-list">
             <div class="product-card">
               <img src="img/burger.jpg" alt="WacDonald Burger" height="150" width="120">
@@ -155,6 +269,24 @@
           <section>
             <h2>Payout Form</h2>
 
+            <h3>CSS selector:</h3>
+            <p>form</p>
+
+            <h3>Sample code:</h3>
+            <code>
+              &lt;form&gt;
+
+                &lt;label&gt;Name:&lt;/label&gt;
+                &lt;input type="text"&gt;
+
+                &lt;button&gt;
+                Submit
+                &lt;/button&gt;
+
+              &lt;/form&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
             <!-- https://www.w3schools.com/html/html_forms.asp -->
             <form>
               <label for="name">Name:</label>
@@ -179,6 +311,24 @@
 
           <section>
             <h2>Checkout Cart</h2>
+
+            <h3>CSS selector:</h3>
+            <p>.cart-item</p>
+
+            <h3>Sample code:</h3>
+            <code>
+              &lt;div class="cart-item"&gt;
+
+                &lt;img src="img/burger.jpg"&gt;
+
+                &lt;div class="item-info"&gt;
+                  &lt;h3&gt;Burger&lt;/h3&gt;
+                &lt;/div&gt;
+
+              &lt;/div&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
             <div class="checkout-container">
 
               <div class="cart">
@@ -261,7 +411,19 @@
 
         <section>
             <h2>Fonts</h2>
+            <h3>CSS selector:</h3>
+            <p>h1, h2, h3, h4, p</p>
 
+            <h3>Sample code:</h3>
+            <code>
+              &lt;h1&gt;Cabin Font&lt;/h1&gt;
+
+              &lt;h2&gt;HindGuntur Font&lt;/h2&gt;
+
+              &lt;p&gt;Roboto Font&lt;/p&gt;
+            </code>
+
+            <h3>Rendered element:</h3>
             <h1>h1: Cabin</h1>
             <h2>h2, h3, h4: HindGuntur</h2>
             <p>p: Roboto</p>
@@ -270,12 +432,38 @@
         <section>
             <h2>Colour Palettes</h2>
 
+            <h3>CSS selector:</h3>
+            <p>body, nav, footer</p>
+
+            <h3>Sample code:</h3>
+            <code>
+              background-color: #FCFDF1;
+              color: #5D168F;
+              background-color: #FDC207;
+            </code>
+
+            <h3>Rendered element:</h3>
             <img src="img/Colors.png" alt="An image that currently does not exist"
               height="400" width="500">
         </section>
 
         <section>
             <h2>Potential imagery, and, or, art direction</h2>
+            <h3>CSS selector:</h3>
+            <p>.brand-imagery img</p>
+
+            <h3>Sample code:</h3>
+            <code>
+              &lt;div class="brand-imagery"&gt;
+
+                &lt;img src="img/potential1.png" alt="Fast food branding style 1"&gt;
+
+                &lt;img src="img/potential2.png" alt="Fast food branding style 2"&gt;
+
+              &lt;/div&gt;
+            </code>
+
+              <h3>Rendered element:</h3>
               <img src="img/potential1.png" alt="An image that currently does not exist"
               height="400" width="400">
               <img src="img/potential2.png" alt="An image that currently does not exist"

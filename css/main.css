@@ -2,18 +2,21 @@
   STYLE GUIDE STYLING 
   Default styling for the style guide 
 */
-*{
-  padding: 0rem;
-  margin: 0rem;
+
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 body {
   font-family: sans-serif;
   margin: 0;
-  background-color:#FCFDF1;
+  background-color: #FCFDF1;
 }
 
-/* FONT STUFF FOR HEADERS AND PARAGRAPHS */
-
+/* TEXT */
 h1 {
   font-family: 'Cabin', sans-serif;
   color: #5D168F;
@@ -34,39 +37,43 @@ ul, ol {
   color: #5D168F;
 }
 
-/* NAVIGATION BUTTON STYLING */
+/* NAVIGATION */
 nav {
-    font-family: "Cabin", sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #5D168F;
+  font-family: "Cabin", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #5D168F;
 }
 
 nav a {
-    flex: 1;
-    padding: 1rem;
-    text-decoration: none;
-    color: #FDC207;
-    text-align: center;
-    
-    background-color: #5D168F;
-    transition: background-color 0.3s, color 0.3s;
-}
-nav a:hover {
-    background-color: #FDC207;
-    color: #5D168F;
+  flex: 1;
+  padding: 1rem;
+  text-decoration: none;
+  color: #FDC207;
+  text-align: center;
+  background-color: #5D168F;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+nav a:hover {
+  background-color: #FDC207;
+  color: #5D168F;
+}
+
+/* LAYOUT */
 main {
   padding: 2rem;
 }
-header{
-    background-color: #FDC207;
-    padding:0;
+
+header {
+  background-color: #FDC207;
 }
+
 header p {
-    color: #5D168F;
+  color: #5D168F;
 }
+
+/* SECTION SPACING */
 section:not([id]) {
   margin: 1em 0;
   padding: 0.5em 0;
@@ -81,18 +88,13 @@ section p {
   margin-top: 0;
 }
 
+/* CODE BLOCK */
 section code {
   background-color: #EEE;
   padding: 0.5em 0.75em;
 }
 
-.product-card {
-  background-color: #FDC207;
-  display: flex;             
-  gap: 16px;                
-  align-items: center;     
-  padding: 12px;
-}
+/* PRODUCT LISTING */
 
 .product-list {
   display: flex;
@@ -100,11 +102,21 @@ section code {
   gap: 2rem;
 }
 
+.product-card {
+  background-color: #FDC207;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 12px;
+}
+
 .product-info {
-  display: grid;
-  flex-direction: row;   
+  display: flex;
+  flex-direction: column;
   gap: 6px;
 }
+
+/* CHECKOUT */
 
 .checkout-container {
   display: flex;
@@ -113,12 +125,10 @@ section code {
   padding: 20px;
 }
 
-/* CART */
 .cart {
   flex: 2;
   background: #FDC207;
   padding: 1.5rem;
-  margin-right: 35rem;
   border-radius: 1rem;
 }
 
@@ -136,47 +146,85 @@ section code {
 }
 
 .total {
-  margin-left: 40rem;
   font-size: 1.5rem;
   font-weight: bold;
+  align-self: flex-end;
 }
 
+/* FOOTER */
+
 footer {
-  background-color:#5D168F;
+  background-color: #5D168F;
   padding: 2rem 0;
 }
 
-footer p{
-  color:#FDC207;
-  margin:0;
-  padding-left:1rem;
+footer p {
+  color: #FDC207;
+  margin: 0;
+  padding-left: 1rem;
 }
 
+/* RESPONSIVE DESIGN */
 
-/* 
-  INTERACTIVE ELEMENTS -------------------
-*/
+/* Tablet */
+@media (max-width: 900px) {
+  .product-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-/* Styling for the navigation button */
+  nav a {
+    flex: 1 1 50%;
+  }
+}
 
-/* FONTS FROM GOOGLE FONTS (learned how to import fonts from Andrew's 235 Class*/
+@media (max-width: 480px) {
+  main {
+    padding: 1rem;
+  }
+
+  .product-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+
+  .cart {
+    width: 100%;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    flex: 1 1 100%;
+  }
+}
+
+/* FONTS*/
 @font-face {
-	font-family: "Cabin";
-	src: url('fonts/Cabin-VariableFont_wdth,wght.ttf') format('woff2'),
-		url('fonts/Cabin-VariableFont_wdth,wght.ttf') format('woff');
-	font-display: swap;
+  font-family: "Cabin";
+  src: url('fonts/Cabin-VariableFont_wdth,wght.ttf') format('woff2'),
+       url('fonts/Cabin-VariableFont_wdth,wght.ttf') format('woff');
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "HindGuntur";
-	src: url('fonts/HindGuntur-Regular.ttf') format('woff2'),
-		url('fonts/HindGuntur-Regular.ttf') format('woff');
-	font-display: swap;
+  font-family: "HindGuntur";
+  src: url('fonts/HindGuntur-Regular.ttf') format('woff2'),
+       url('fonts/HindGuntur-Regular.ttf') format('woff');
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "Roboto";
-	src: url('fonts/Roboto-VariableFont_wght,wght.ttf') format('woff2'),
-		url('fonts/Roboto-VariableFont_wght,wght.ttf') format('woff');
-	font-display: swap;
+  font-family: "Roboto";
+  src: url('fonts/Roboto-VariableFont_wght,wght.ttf') format('woff2'),
+       url('fonts/Roboto-VariableFont_wght,wght.ttf') format('woff');
+  font-display: swap;
 }
