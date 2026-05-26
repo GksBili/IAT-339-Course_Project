@@ -37,6 +37,16 @@ ul, ol {
   color: #5D168F;
 }
 
+.link {
+  color: #5D168F;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #300c4a;
+}
+
 /* NAVIGATION */
 nav {
   font-family: "Cabin", sans-serif;
@@ -117,6 +127,25 @@ section code {
 }
 
 /* CHECKOUT */
+/* FDC207 */
+.button {
+  background-color: #5D168F;
+  color: #FDC207;
+  /* https://www.w3schools.com/css/css_border.asp */
+  border: #000000;
+  border-style: outset;
+  border-width: 2px;
+
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5rem;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #300c4a;
+}
 
 .checkout-container {
   display: flex;

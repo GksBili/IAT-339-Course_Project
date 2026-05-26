@@ -21,14 +21,15 @@
             <h2>In-text link</h2>
 
             <h3>CSS selector:</h3>
-            <p>.button</p>
+            <p>a, link</p>
 
             <h3>Sample code:</h3>
             <code>
-             &lt;a href="#" class="button"&gt;Default Button&lt;/a&gt;</code>
+            &lt;a class="link" href="https://github.com/GksBili/IAT-339-Course_Project"&gt;A link to our GitHub repository&lt;/a&gt;
+            </code>
 
             <h3>Rendered element:</h3>
-            <a href="https://github.com/GksBili/IAT-339-Course_Project">A link to our GitHub repository</a>
+            <a class="link" href="https://github.com/GksBili/IAT-339-Course_Project">A link to our GitHub repository</a>
           </section>
 
           <!-- Default Button styling section -->
@@ -54,14 +55,14 @@
             <h2>Submit/Reset Buttons</h2>
 
             <h3>CSS selector:</h3>
-            <p>button</p>
+            <p>.button</p>
 
             <!-- https://www.w3schools.com/tags/tag_button.asp -->
             <h3>Sample code:</h3>
-            <code>&lt;button type="button"&gt;Order&lt;/button&gt;</code>
+            <code>&lt;button class="button"&gt;Order&lt;/button&gt;</code>
 
              <h3>Rendered element:</h3>
-            <button type="button">Order</button>
+            <button class="button">Order</button>
           </section>
 
           <section>
@@ -102,7 +103,7 @@
           <section>
             <h2>Image as a link</h2>
             <h3>CSS selector:</h3>
-            <p>a img</p>
+            <p>a, img</p>
 
             <h3>Sample code:</h3>
             <code>
@@ -171,7 +172,7 @@
             <h2>Numbered Lists</h2>
 
             <h3>CSS selector:</h3>
-            <p>ol li</p>
+            <p>ol, li</p>
 
             <h3>Sample code:</h3>
             <code>
@@ -199,7 +200,7 @@
             <h2>Main Navigation</h2>
 
             <h3>CSS selector:</h3>
-            <p>nav</p>
+            <p>a, nav</p>
 
             <h3>Sample code:</h3>
             <code>
@@ -222,7 +223,7 @@
           <h2>Product Listing</h2>
 
           <h3>CSS selector:</h3>
-          <p>.product-card</p>
+          <p>.product-list, .product-card, .product-info, img, p, h3</p>
 
           <h3>Sample code:</h3>
           <code>
@@ -270,11 +271,11 @@
             <h2>Payout Form</h2>
 
             <h3>CSS selector:</h3>
-            <p>form</p>
+            <p>form, .button</p>
 
             <h3>Sample code:</h3>
             <code>
-              &lt;form&gt;
+              &lt;form,&gt;
 
                 &lt;label&gt;Name:&lt;/label&gt;
                 &lt;input type="text"&gt;
@@ -304,7 +305,7 @@
               <input type="radio" id="debit" name="method" value="debit">
               <label for="debit">Debit Card</label><br><br>
 
-              <button type="button">Submit Payment</button>
+              <button class="button">Submit Payment</button>
             </form>
 
           </section>
@@ -313,7 +314,7 @@
             <h2>Checkout Cart</h2>
 
             <h3>CSS selector:</h3>
-            <p>.cart-item</p>
+            <p>.cart-item, img, .item-info</p>
 
             <h3>Sample code:</h3>
             <code>
@@ -364,7 +365,7 @@
 
                 <div class="total">
                   <h3>Total: $6.97</h3>
-                  <button type="button">Order</button>
+                  <button class="button">Order</button>
                 </div>
               </div>
 
