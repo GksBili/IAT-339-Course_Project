@@ -15,6 +15,7 @@ body {
   margin: 0;
   background-color: #FCFDF1;
 
+  /* make it 100% of the viewport hight */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -51,7 +52,6 @@ ul, ol {
 }
 
 
-
 .link {
   color: #5D168F;
   text-decoration: underline;
@@ -61,7 +61,6 @@ ul, ol {
 .link:hover {
   color: #300c4a;
 }
-
 
 
 /* NAVIGATION */
@@ -104,7 +103,6 @@ header p {
 section:not([id]) {
   margin: 1em 0;
   padding: 0.5em 0;
-
 }
 
 section h3 {
@@ -137,10 +135,6 @@ section code {
   flex-direction: column;
   gap: 2rem;
 }
-
-
-
-
 
 
 /* PRODUCT LISTING */
@@ -191,8 +185,6 @@ section code {
   /* This centers the image within the product card */
   margin-left: auto;
   margin-right: auto;
-
-  
   
 }
 
@@ -253,6 +245,8 @@ section code {
 /* FOOTER */
 
 footer {
+  /* The margin-top property sets the top margin of an element. Pushes footer to the very bottom.
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin-top */
   margin-top: auto;
   width: 100%;
 
