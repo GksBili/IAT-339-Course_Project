@@ -14,6 +14,10 @@ body {
   font-family: sans-serif;
   margin: 0;
   background-color: #FCFDF1;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* TEXT */
@@ -22,9 +26,18 @@ h1 {
   color: #5D168F;
 }
 
+.h1-product-page{
+  font-size: 5rem;
+  max-width: 25rem;
+}
+
 h2, h3, h4 {
   font-family: 'HindGuntur', sans-serif;
   color: #5D168F;
+}
+
+.h3-product{
+  padding:1rem;
 }
 
 p {
@@ -37,6 +50,8 @@ ul, ol {
   color: #5D168F;
 }
 
+
+
 .link {
   color: #5D168F;
   text-decoration: underline;
@@ -46,6 +61,8 @@ ul, ol {
 .link:hover {
   color: #300c4a;
 }
+
+
 
 /* NAVIGATION */
 nav {
@@ -87,7 +104,7 @@ header p {
 section:not([id]) {
   margin: 1em 0;
   padding: 0.5em 0;
-  border-top: 1px solid #333;
+
 }
 
 section h3 {
@@ -104,26 +121,79 @@ section code {
   padding: 0.5em 0.75em;
 }
 
-/* PRODUCT LISTING */
-
-.product-list {
+/* PRODUCT INFORMATION PAGE */
+.top-product-display-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  
+}
+
+.middle-product-display-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 2rem;
 }
 
-.product-card {
-  background-color: #FDC207;
+
+
+
+
+
+/* PRODUCT LISTING */
+
+.product-list {
   display: flex;
-  gap: 16px;
-  align-items: center;
-  padding: 12px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex: 8;
+}
+
+.product-card {
+  /* background-color: #FDC207; */
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 13.75rem; 
+  display: flex;
+  /* This makes the product card display elements within it in a stack */
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+/* removing the underline */
+.product-card a {
+  color: #5D168F;
+  text-decoration: none;
+}
+
+.product-card a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0.35rem;
 }
 
 .product-info {
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.product-image{
+  width: 120px;
+  height: auto;
+  display: block;
+
+  /* This centers the image within the product card */
+  margin-left: auto;
+  margin-right: auto;
+
+  
+  
 }
 
 /* CHECKOUT */
@@ -183,6 +253,9 @@ section code {
 /* FOOTER */
 
 footer {
+  margin-top: auto;
+  width: 100%;
+
   background-color: #5D168F;
   padding: 2rem 0;
 }
@@ -194,6 +267,24 @@ footer p {
 }
 
 /* RESPONSIVE DESIGN */
+
+/* Menu */
+@media (width > 40rem) {
+    .product-card {
+        /* made it so that at max it would only have 3 cards per row accounting for the 2+2 rem gap specified above*/
+        max-width: calc((100% - 4rem) / 3); 
+        flex-basis: 100%; 
+    }
+}
+
+@media (width <= 40rem) {
+    .card {
+        max-width: calc((100% - 4rem) / 2); 
+        flex-basis: 100%; 
+    }
+}
+
+
 
 /* Tablet */
 @media (max-width: 900px) {
