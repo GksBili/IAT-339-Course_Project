@@ -384,6 +384,7 @@ section code {
   width: 50%;
   max-width: 50%;
   height: auto;
+  padding: 1rem;
 }
 
 .home-section p {
@@ -399,11 +400,26 @@ section code {
   border-radius: 1rem;
   padding: 2rem;
   margin-top: 2rem;
-
+}
+.home-card p{
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
-
-
+.home-card-2 {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: #55118B;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+.home-card-2 p{
+  color:#FDC207;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
 
 
 /* FOOTER */
