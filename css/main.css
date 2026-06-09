@@ -21,6 +21,12 @@ body {
   flex-direction: column;
 }
 
+.page-container {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* TEXT */
 h1 {
   font-family: 'Cabin', sans-serif;
@@ -66,25 +72,81 @@ ul, ol {
 /* NAVIGATION */
 nav {
   font-family: "Cabin", sans-serif;
+  font-size: 1.25rem;
   display: flex;
   flex-wrap: wrap;
-  background-color: #5D168F;
+
+  align-items: stretch;
+
+  /* Set height so logo can follow */
+  height: 5rem;
+
+
+  width: 50vw;
+  max-width: 72rem;
+  margin: 0 auto;
+  
+  gap: 1rem;
+
 }
 
+
 nav a {
-  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   padding: 1.5rem;
+
+  flex: 1;
   text-decoration: none;
-  color: #FDC207;
+  color: #5D168F;
   text-align: center;
-  background-color: #5D168F;
+  background-color: #FCFDF1;
   transition: background-color 0.3s, color 0.3s;
 }
 
+.nav-logo {
+  display: block;
+
+  /* set height to 100% of nav height */
+  height: 100%;
+  width: auto;
+  
+}
+
 nav a:hover {
-  background-color: #FDC207;
+  border-bottom: 3px solid #5D168F;
+  border-width: 10px;
+  border-radius: 0.5rem;
   color: #5D168F;
 }
+
+
+/* LOGO LINK STUFF */
+.logo-link {
+  padding: 0;
+
+  /* this flex here does the following: dont grow, dont shrink, use the natural width as the starting size. */
+  flex: 0 0 auto; 
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5D168F;
+}
+
+.logo-link:hover {
+  background-color: #5D168F;
+  border-bottom: none;
+}
+
+.logo-link .nav-logo {
+  height: 100%;
+  width: auto;
+}
+
 
 /* LAYOUT */
 main {
@@ -249,15 +311,23 @@ footer {
   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin-top */
   margin-top: auto;
   width: 100%;
+  padding: 1rem 0;
+  border-top: 1px solid #5D168F;
 
-  background-color: #5D168F;
-  padding: 2rem 0;
 }
 
 footer p {
-  color: #FDC207;
+  color: #5D168F;
   margin: 0;
-  padding-left: 1rem;
+  text-align: center;
+  
+}
+
+.footer-logo {
+  display: block;
+  margin: 0 auto 1rem auto;
+  height: 50px;
+  width: auto;
 }
 
 /* RESPONSIVE DESIGN */
@@ -278,6 +348,13 @@ footer p {
     }
 }
 
+@media (width <= 40rem) {
+  nav {
+    width: 100%;
+    max-width: none;
+  }
+
+}
 
 
 /* Tablet */
