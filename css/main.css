@@ -22,7 +22,7 @@ body {
 }
 
 .page-container {
-  width: 50%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -82,7 +82,7 @@ nav {
   height: 5rem;
 
 
-  width: 50vw;
+  width: 60vw;
   max-width: 72rem;
   margin: 0 auto;
   
@@ -303,6 +303,34 @@ section code {
   font-weight: bold;
   align-self: flex-end;
 }
+
+/* About Page */
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin-top: 2rem;
+
+}
+
+.about-section {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.one-third {
+  flex: 1;
+}
+
+.two-thirds {
+  flex: 2;
+  line-height: 1.3
+}
+
+
+
+
 
 /* FOOTER */
 
