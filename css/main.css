@@ -23,6 +23,7 @@ body {
 
 .page-container {
   width: 60%;
+  max-width: 72rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -49,12 +50,12 @@ h2, h3, h4 {
 
 p {
   font-family: 'Roboto', sans-serif;
-  color: #5D168F;
+  color: #55118B;
 }
 
 ul, ol {
   margin-left: 1.5rem;
-  color: #5D168F;
+  color: #55118B;
 }
 
 
@@ -64,8 +65,8 @@ ul, ol {
   transition: color 0.3s;
 }
 
-.link:hover {
-  color: #300c4a;
+.link:hover, .link:focus {
+  color: #FDC207;
 }
 
 
@@ -74,7 +75,7 @@ nav {
   font-family: "Cabin", sans-serif;
   font-size: 1.25rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 
   align-items: stretch;
 
@@ -82,7 +83,7 @@ nav {
   height: 5rem;
 
 
-  width: 60vw;
+  width: 90%;
   max-width: 72rem;
   margin: 0 auto;
   
@@ -100,10 +101,11 @@ nav a {
 
   flex: 1;
   text-decoration: none;
-  color: #5D168F;
+  color: #55108B;
   text-align: center;
   background-color: #FCFDF1;
   transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
 }
 
 .nav-logo {
@@ -112,10 +114,9 @@ nav a {
   /* set height to 100% of nav height */
   height: 100%;
   width: auto;
-  
 }
 
-nav a:hover {
+nav a:hover, nav a:focus {
   border-bottom: 3px solid #5D168F;
   border-width: 10px;
   border-radius: 0.5rem;
@@ -134,12 +135,15 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #5D168F;
+  background-color: #55118B;
 }
 
-.logo-link:hover {
-  background-color: #5D168F;
+.logo-link:hover, .logo-link:focus {
+  background-color: #55118B;
   border-bottom: none;
+
+  /* Learned about transform:scale from this website https://www.w3schools.com/cssref/func_scale.php */
+  transform: scale(1.05);
 }
 
 .logo-link .nav-logo {
@@ -196,6 +200,30 @@ section code {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
+
+}
+
+/* PRODUCT DESCRIPTION 2 columns */
+.product-description {
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-info-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.bottom-product-display-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+
 }
 
 
@@ -223,7 +251,7 @@ section code {
 
 /* removing the underline */
 .product-card a {
-  color: #5D168F;
+  color: #55118B;
   text-decoration: none;
 }
 
@@ -240,8 +268,8 @@ section code {
 }
 
 .product-image{
-  width: 120px;
-  height: auto;
+  width: 100px;
+  height: 100px;
   display: block;
 
   /* This centers the image within the product card */
@@ -251,14 +279,10 @@ section code {
 }
 
 /* CHECKOUT */
-/* FDC207 */
 .button {
-  background-color: #5D168F;
-  color: #FDC207;
+  background-color: #55118B;
+  color: #dfdfdf;
   /* https://www.w3schools.com/css/css_border.asp */
-  border: #000000;
-  border-style: outset;
-  border-width: 2px;
 
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -267,42 +291,40 @@ section code {
   transition: background-color 0.2s;
 }
 
-.button:hover {
-  background-color: #300c4a;
+.checkout-image {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.button:hover, .button:focus {
+  background-color: #FDC207;
+  color: #55118B;
 }
 
 .checkout-container {
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  padding: 20px;
-}
-
-.cart {
-  flex: 2;
-  background: #FDC207;
-  padding: 1.5rem;
-  border-radius: 1rem;
-}
-
-.cart-item {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 1rem;
-  align-items: center;
-}
-
-.item-info {
-  display: flex;
-  flex-direction: column;
+  flex-direction: flex-start;
   gap: 1rem;
+  align-items: left;
 }
 
-.total {
-  font-size: 1.5rem;
-  font-weight: bold;
-  align-self: flex-end;
+.item-checkout {
+  display: flex;
+  gap: 1rem;
+
+  /*this vertically centers the image and the quantity input*/
+  align-items: center; 
 }
+
+/* this is to change the size of the quantity input field */
+.item-checkout input[type="number"] {
+  width: 4rem;
+  height: 2rem;
+  padding: 0.25rem;
+  font-size: 1rem;
+}
+
 
 /* About Page */
 .about-image {
@@ -317,6 +339,10 @@ section code {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
+}
+
+.purchased-section {
+  margin: auto;
 }
 
 .one-third {
@@ -360,6 +386,56 @@ footer p {
 
 /* RESPONSIVE DESIGN */
 
+/* general */
+@media (max-width: 48rem) {
+  .page-container {
+    width: 90%;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    
+  }
+
+  nav a {
+    /* set the flex to 1 1 100% 1 meaning it will take up 1 part of the available space, 1 means it will grow and shrink as needed, and 100% means it will take up 100% of the available space */
+    flex: 1 1 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .logo-link {
+    /* This ensures the logo is placed first in the navigation when on mobile */
+    order: -1;
+    margin: 0 auto;
+    flex: 1 1 100%;
+  }
+  .logo-link .nav-logo {
+    height: 5rem;
+    width: auto;
+  }
+
+
+
+
+  .top-product-display-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .h1-product-page {
+    font-size: 3rem;
+  }
+
+  .top-product-display-container img {
+    width: 18rem;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 /* Menu */
 @media (width > 40rem) {
     .product-card {
@@ -376,6 +452,8 @@ footer p {
     }
 }
 
+
+/* Nav */
 @media (width <= 40rem) {
   nav {
     width: 100%;
@@ -384,47 +462,32 @@ footer p {
 
 }
 
-
-/* Tablet */
-@media (max-width: 900px) {
-  .product-card {
+  /* Product Information */
+/* makes all sections with this class, when below 48rem width, stack them */
+@media (max-width: 48rem) {
+  .product-info-layout {
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav a {
-    flex: 1 1 50%;
   }
 }
 
-@media (max-width: 480px) {
-  main {
-    padding: 1rem;
-  }
 
-  .product-card {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
+/* checkout */
+@media (max-width: 48rem) {
   .checkout-container {
     flex-direction: column;
+    align-items: center;
   }
 
-  .cart {
+  .item-checkout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item-checkout input[type="number"] {
     width: 100%;
   }
-
-  .cart-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav a {
-    flex: 1 1 100%;
-  }
 }
+
 
 /* FONTS*/
 @font-face {

@@ -8,64 +8,111 @@
   <body>
     
   <nav>
-        <a href="index.html">About</a>
+        <a href="about-us.html">About</a>
         <a href="menu.html">Menu</a>
         <a href="index.html" class="logo-link">
             <img class="nav-logo" src="img/logo.png" alt="WacDonald's logo"/>
         </a>
         <a href="checkout.html">Checkout</a>
-        <a href="style-guide.html">Contact Us</a>
+        <a href="contact.html">Contact Us</a>
   </nav>
-    <main>
+    <main class="page-container">
       <h1>Checkout</h1>
-      <p>Your order has been placed successfully!</p>
 
-      <div class="checkout-container">
 
-              <div class="cart">
-                <h2>Your Cart</h2>
 
-                <div class="cart-item">
-                  <img src="img/burger.jpg" alt="Burger" height="150" width="120">
+      <section class="checkout-container">
+        <section class="item-checkout">
+          <img src="img/Wacburger.png" alt="WacDonald Burger" class="checkout-image">
+          <label for="burger-quantity">Quantity:</label>
+          <input id="burger-quantity" type="number" name="burger-quantity" min="0" value="0">
+        </section>
+        
+        <section class="item-checkout">
+          <img src="img/WacFries.png" alt="WacDonald Fries" class="checkout-image">
+          <label for="fries-quantity">Quantity:</label>
+          <input id="fries-quantity" type="number" name="fries-quantity" min="0" value="0">
+        </section>  
 
-                  <div class="item-info">
-                    <h3>WacDonald Burger</h3>
-                    <h4>$2.99</h4>
+        <section class="item-checkout">
+          <img src="img/WacSoda.png" alt="WacDonald Soda" class="checkout-image">
+          <label for="soda-quantity">Quantity:</label>
+          <input id="soda-quantity" type="number" name="soda-quantity" min="0" value="0">
+        </section>  
+          
 
-                    <label>
-                      Quantity:
-                      <input type="number" value="1" min="1">
-                    </label>
-                  </div>
-                </div>
+      </section>
 
-                <div class="cart-item">
-                  <img src="img/fries.jpg" alt="Fries" height="100" width="120">
 
-                  <div class="item-info">
-                    <h3>Wac Fries</h3>
-                    <h4>$1.01</h4>
+      <section>
+        <h2>Delivery Options</h2>
+        <form>
+          <input type="radio" id="delivery" name="method" value="delivery">
+          <label for="delivery">Delivery</label><br>
+          <input type="radio" id="pickup" name="method" value="pickup">
+          <label for="pickup">Pickup</label>
+        </form>
+      </section>
 
-                    <label>
-                      Quantity:
-                      <input type="number" value="2" min="1">
-                    </label>
-                  </div>
-                </div>
+      <section>
+        <h2>Delivery Information</h2>
+        <form>
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" placeholder="123 Main St"><br><br>
 
-                <div class="total">
-                  <h3>Total: $6.97</h3>
-                  <button class="button">Order</button>
-                </div>
-              </div>
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" placeholder="Anytown"><br><br>
 
-            </div>
+          <label for="province">State:</label>
+          <input type="text" id="province" name="province" placeholder="BC"><br><br>
+
+          <label for="zip">Zip Code:</label>
+          <input type="text" id="zip" name="zip" placeholder="12345"><br><br>
+      </section>
+      
+
+      <section>
+            <h2>Payment</h2>
+
+            <h3>Rendered element:</h3>
+            <!-- https://www.w3schools.com/html/html_forms.asp -->
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="John Doe"><br><br>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com"><br><br>
+
+              <label for="card">Card Number:</label>
+              <input type="text" id="card" name="card" placeholder="1234 5678 9012 3456"><br><br>
+
+              <label>Payment Method:</label><br>
+              <input type="radio" id="credit" name="method" value="credit">
+              <label for="credit">Credit Card</label>
+              <input type="radio" id="debit" name="method" value="debit">
+              <label for="debit">Debit Card</label><br><br>
+
+            </form>
+
+            <a href="payment-complete.html">
+              <button class="button">Submit Payment</button>
+            </a>
+
+      </section>
+
+          
+      
+
     </main>
     
     <footer class="page-container">
 
       <img src="img/logo.png" alt="WacDonald's logo" class="footer-logo"/>
       <p>© 2026 WacDonald's All Rights Reserved</p>
+      
+      <a href="style-guide.html">
+        <p class="link">Style Guide</p>
+      </a>
 
     </footer>
 
